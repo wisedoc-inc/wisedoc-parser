@@ -1,0 +1,10 @@
+.DS_Store
+.ipynb_checkpoints
+*/.ipynb_checkpoints/*
+__pycache__/
+venv
+dist
+
+draft
+/skill_db_relax_20.json
+/token_dist.json

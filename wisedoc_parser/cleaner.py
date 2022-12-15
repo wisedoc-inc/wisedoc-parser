@@ -40,7 +40,7 @@ def remove_punctuation(
 
     Examples
     --------
-    >>> from SkillNer.cleaner import remove_punctuation
+    >>> from wisedoc_parser.cleaner import remove_punctuation
     >>> text = "Hello there, I am SkillNer! Annoation, annotation, annotation ..."
     >>> print(remove_punctuation(text))
     Hello there  I am SkillNer  Annoation  annotation  annotation
@@ -74,7 +74,7 @@ def remove_redundant(
 
     Examples
     --------
-    >>> from SkillNer.cleaner import remove_redundant
+    >>> from wisedoc_parser.cleaner import remove_redundant
     >>> text = "you have professional experience building React apps, you are familiar with version control using git and GitHub"
     >>> print(remove_redundant(text))
     building React apps,  familiar with version control using git and GitHub
@@ -108,7 +108,7 @@ def stem_text(
 
     Examples
     --------
-    >>> from SkillNer.cleaner import stem_text
+    >>> from wisedoc_parser.cleaner import stem_text
     >>> text = "you have professional experience building React apps, you are familiar with version control using git and GitHub"
     >>> print(stem_text(text))
     you have profession experi build react apps, you are familiar with version control use git and github
@@ -138,7 +138,7 @@ def lem_text(
 
     Examples
     --------
-    >>> from SkillNer.cleaner import lem_text
+    >>> from wisedoc_parser.cleaner import lem_text
     >>> import spacy
     >>> nlp = spacy.load("en_core_web_sm")
     >>> text = "you have professional experience building React apps, you are familiar with version control using git and GitHub"
@@ -168,7 +168,7 @@ def remove_extra_space(
 
     Examples
     --------
-    >>> from SkillNer.cleaner import remove_extra_space
+    >>> from wisedoc_parser.cleaner import remove_extra_space
     >>> text = " I am   sentence with   a lot of  annoying extra    spaces    ."
     >>> print(remove_extra_space(text))
     I am sentence with a lot of annoying extra spaces .
@@ -209,7 +209,7 @@ def find_index_phrase(
 
     Examples
     --------
-    >>> from SkillNer.cleaner import find_index_phrase
+    >>> from wisedoc_parser.cleaner import find_index_phrase
     >>> text = "you have professional experience building React apps, you are familiar with version control using git and GitHub"
     >>> phrase = "experience building"
     >>> find_index_phrase(phrase, text)
@@ -278,7 +278,7 @@ class Cleaner:
 
         Examples
         -------
-        >>> from skillNer.cleaner import Cleaner
+        >>> from wisedoc_parser.cleaner import Cleaner
         >>> cleaner = Cleaner(
                         to_lowercase=True,
                         include_cleaning_functions=["remove_punctuation", "remove_extra_space"]

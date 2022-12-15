@@ -5,7 +5,7 @@ from posixpath import dirname
 # installed packs
 #
 # my packs
-from skillNer.network.remote_db import RemoteBucket
+from wisedoc_parser.network.remote_db import RemoteBucket
 
 # mapping skill and color
 SKILL_TO_COLOR = {

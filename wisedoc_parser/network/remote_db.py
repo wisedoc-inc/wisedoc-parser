@@ -53,7 +53,7 @@ class RemoteBucket:
 
         Examples
         --------
-        >>> from skillNer.network.remote_db import RemoteBucket
+        >>> from wisedoc_parser.network.remote_db import RemoteBucket
         >>> buckets = RemoteBucket(
             branch="master"
         )

@@ -9,8 +9,8 @@ import math
 import numpy as np
 import jellyfish
 # my packs
-from skillNer.text_class import Text
-from skillNer.general_params import TOKEN_DIST
+from wisedoc_parser.text_class import Text
+from wisedoc_parser.general_params import TOKEN_DIST
 
 
 class Utils:

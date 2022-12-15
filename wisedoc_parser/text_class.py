@@ -3,8 +3,8 @@ from typing import List
 # installed packs
 #
 # my packs
-from skillNer.cleaner import Cleaner, stem_text, find_index_phrase
-from skillNer.general_params import S_GRAM_REDUNDANT
+from wisedoc_parser.cleaner import Cleaner, stem_text, find_index_phrase
+from wisedoc_parser.general_params import S_GRAM_REDUNDANT
 
 
 # building block of text
@@ -25,7 +25,7 @@ class Word:
 
         Examples
         --------
-        >>> from skillNer.text_class import Word
+        >>> from wisedoc_parser.text_class import Word
         >>> word_obj = Word("Hello")
         """
 
@@ -55,7 +55,7 @@ class Word:
 
         Examples
         --------
-        >>> from skillNer.text_class import Word
+        >>> from wisedoc_parser.text_class import Word
         >>> word_obj = Word("Hello")
         >>> word_obj.metadata().keys()
         dict_keys(['lemmed', 'stemmed', 'is_stop_word', 'is_matachable'])
@@ -79,7 +79,7 @@ class Word:
 
         Examples
         --------
-        >>> from skillNer.text_class import Word
+        >>> from wisedoc_parser.text_class import Word
         >>> word_obj = Word("Hello")
         >>> print(word_obj)
         Hello
@@ -97,7 +97,7 @@ class Word:
 
         Examples
         --------
-        >>> from skillNer.text_class import Word
+        >>> from wisedoc_parser.text_class import Word
         >>> word_obj = Word("Hello")
         >>> len(word_obj)
         5
@@ -128,7 +128,7 @@ class Text:
         --------
         >>> import spacy
         >>> nlp = spacy.load('en_core_web_sm')
-        >>> from skillNer.text_class import Text
+        >>> from wisedoc_parser.text_class import Text
         >>> text_obj = Text("Fluency in both English and French is mandatory")
         """
 
@@ -200,7 +200,7 @@ class Text:
         --------
         >>> import spacy
         >>> nlp = spacy.load('en_core_web_sm')
-        >>> from skillNer.text_class import Text
+        >>> from wisedoc_parser.text_class import Text
         >>> text_obj = Text("Fluency in both English and French is mandatory")
         >>> text_obj.stemmed()
         'fluenci in both english and french is mandatori'
@@ -236,7 +236,7 @@ class Text:
         --------
         >>> import spacy
         >>> nlp = spacy.load('en_core_web_sm')
-        >>> from skillNer.text_class import Text
+        >>> from wisedoc_parser.text_class import Text
         >>> text_obj = Text("Fluency in both English and French is mandatory")
         >>> text_obj.lemmed()
         'fluency in both english and french be mandatory'
@@ -264,7 +264,7 @@ class Text:
         --------
         >>> import spacy
         >>> nlp = spacy.load('en_core_web_sm')
-        >>> from skillNer.text_class import Text
+        >>> from wisedoc_parser.text_class import Text
         >>> text_obj = Text("Fluency in both English and French is mandatory")
         >>> print(text_obj)
         Fluency in both English and French is mandatory
@@ -294,7 +294,7 @@ class Text:
         --------
         >>> import spacy
         >>> nlp = spacy.load('en_core_web_sm')
-        >>> from skillNer.text_class import Text
+        >>> from wisedoc_parser.text_class import Text
         >>> text_obj = Text("Fluency in both English and French is mandatory")
         >>> text_obj[3]
         <skillNer.text_class.Word at 0x1cf13a9bd60>
@@ -316,7 +316,7 @@ class Text:
         --------
         >>> import spacy
         >>> nlp = spacy.load('en_core_web_sm')
-        >>> from skillNer.text_class import Text
+        >>> from wisedoc_parser.text_class import Text
         >>> text_obj = Text("Fluency in both English and French is mandatory")
         >>> len(text_obj)
         8
@@ -345,7 +345,7 @@ class Text:
         --------
         >>> import spacy
         >>> nlp = spacy.load('en_core_web_sm')
-        >>> from skillNer.text_class import Text
+        >>> from wisedoc_parser.text_class import Text
         >>> list_words = Text.words_start_end_position("Hello World I am SkillNer")
         >>> word_1 = list_words[0]
         >>> print(word_1.start, word_1.end)

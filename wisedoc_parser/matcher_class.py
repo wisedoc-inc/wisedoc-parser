@@ -3,7 +3,7 @@ from typing import List
 # installed packs
 #
 # my packs
-from skillNer.text_class import Text
+from wisedoc_parser.text_class import Text
 
 
 class Matchers:
@@ -71,8 +71,8 @@ class Matchers:
 
         Examples
         --------
-        >>> from skillNer.matcher_class import Matchers
-        >>> from skillNer.general_params import SKILL_DB
+        >>> from wisedoc_parser.matcher_class import Matchers
+        >>> from wisedoc_parser.general_params import SKILL_DB
         >>> import spacy
         >>> from spacy.matcher import PhraseMatcher
         >>> nlp = spacy.load('en_core_web_sm')

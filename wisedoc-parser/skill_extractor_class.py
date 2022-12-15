@@ -116,7 +116,7 @@ class SkillExtractor:
         text_obj = Text(text, self.nlp)
         # get matches
         skills_full, text_obj = self.skill_getters.get_full_match_skills(
-            text_obj, self.matchers['full_matcher'])
+            text_obj, self.matchers['full_matcher'], self.skills_db)
 
         # tests
 

@@ -11,7 +11,7 @@ dependencies = [
 ]
 
 setuptools.setup(
-    name="Wisedoc",
+    name="wisedoc-parser",
     version="1.0.0",
     author="Vamshi Bachaneboina",
     author_email="vamshi.bachaneboina@wisedoc.net",

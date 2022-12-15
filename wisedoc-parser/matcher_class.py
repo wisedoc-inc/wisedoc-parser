@@ -233,7 +233,8 @@ class SkillsGetter:
     def get_full_match_skills(
         self,
         text_obj: Text,
-        matcher
+        matcher,
+        skills_db
     ):
 
         skills = []
@@ -241,8 +242,10 @@ class SkillsGetter:
 
         for match_id, start, end in matcher(doc):
             id_ = matcher.vocab.strings[match_id]
+
             # add full_match to store
             skills.append({'skill_id': id_,
+                           'skill_type': skills_db[id_]['skill_type'],
                            'doc_node_value': str(doc[start:end]),
                            'score': 1,
                            'doc_node_id': list(range(start, end))})

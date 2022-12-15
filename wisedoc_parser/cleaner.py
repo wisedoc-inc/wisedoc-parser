@@ -4,7 +4,7 @@ from nltk.stem import PorterStemmer
 # native packs
 from typing import List
 # my pack
-from skillNer.general_params import S_GRAM_REDUNDANT, LIST_PUNCTUATIONS
+from wisedoc_parser.general_params import S_GRAM_REDUNDANT, LIST_PUNCTUATIONS
 
 
 # load nlp
@@ -289,7 +289,7 @@ class Cleaner:
         """
 
         # lower the provided text
-        if(self.to_lowercase):
+        if (self.to_lowercase):
             text = text.lower()
 
         # perform cleaning while ignoring exclude_cleaning_functions

@@ -1,5 +1,5 @@
 # native packs
-#
+
 # installed packs
 from spacy import displacy
 # my packs
@@ -140,8 +140,7 @@ class SkillExtractor:
             'text': text_obj.transformed_text,
             'results': {
                 'full_matches': full_sk,
-                'ngram_scored': [match for match in process_n_gram if match['score'] >= tresh],
-
+                'ngram_scored': [match for match in process_n_gram if match['score'] >= tresh]
             }
         }
 

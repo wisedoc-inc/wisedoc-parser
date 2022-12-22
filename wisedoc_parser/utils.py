@@ -162,7 +162,7 @@ class Utils:
                 }
     # main functions
 
-    def process_n_gram(self, matches, text_obj: Text):
+    def process_n_gram(self, matches, text_obj: Text, skills_db):
         """apply on conflicted matches to choose which  ones to keep
 
            Parameters
@@ -207,10 +207,12 @@ class Utils:
             types = []
             scores = []
             lens = []
+
             for sk_id in skill_ids:
                 # score skill given span
                 scored_sk_obj = self.retain(
                     text_obj, span, sk_id, look_up, corpus)
+                scored_sk_obj['skill_type'] = skills_db[scored_sk_obj['skill_id']]['skill_type']
                 span_scored_skills.append(scored_sk_obj)
                 types.append(scored_sk_obj['type'])
                 lens.append(scored_sk_obj['len'])

@@ -121,7 +121,7 @@ class SkillExtractor:
         # tests
 
         skills_abv, text_obj = self.skill_getters.get_abv_match_skills(
-            text_obj, self.matchers['abv_matcher'])
+            text_obj, self.matchers['abv_matcher'], self.skills_db)
 
         skills_uni_full, text_obj = self.skill_getters.get_full_uni_match_skills(
             text_obj, self.matchers['full_uni_matcher'])
@@ -134,7 +134,8 @@ class SkillExtractor:
         full_sk = skills_full + skills_abv
         # process pseudo submatchers output conflicts
         to_process = skills_on_token + skills_low_form + skills_uni_full
-        process_n_gram = self.utils.process_n_gram(to_process, text_obj)
+        process_n_gram = self.utils.process_n_gram(
+            to_process, text_obj, self.skills_db)
 
         return {
             'text': text_obj.transformed_text,

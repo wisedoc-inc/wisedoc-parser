@@ -258,7 +258,8 @@ class SkillsGetter:
     def get_abv_match_skills(
         self,
         text_obj: Text,
-        matcher
+        matcher,
+        skills_db
     ):
         skills = []
 
@@ -267,6 +268,7 @@ class SkillsGetter:
             id_ = matcher.vocab.strings[match_id]
             if text_obj[start].is_matchable:
                 skills.append({'skill_id': id_,
+                               'skill_type': skills_db[id_]['skill_type'],
                                'score': 1,
                                'doc_node_value': str(doc[start:end]),
                                'doc_node_id': [start]})
